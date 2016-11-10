@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A30DB89C-638D-4AC3-A5ED-C51BBFE4A578}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Flup</RootNamespace>
+    <AssemblyName>Flup</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FlickrNetExtender\Data\Exceptions\FlickrExtenderException.cs" />
+    <Compile Include="FlickrNetExtender\Data\Parallel\ParallelOperationData.cs" />
+    <Compile Include="FlickrNetExtender\Data\Parallel\ParallelOperationDataBase.cs" />
+    <Compile Include="FlickrNetExtender\Data\Parallel\ParallelOperationDataWithInput.cs" />
+    <Compile Include="FlickrNetExtender\Data\ProgressEventData\PhotosetsSearchAllProgressEventData.cs" />
+    <Compile Include="FlickrNetExtender\Data\ProgressEventData\PhotosSearchAllProgressEventData.cs" />
+    <Compile Include="FlickrNetExtender\Data\ProgressEventData\ProgressEventDataBase.cs" />
+    <Compile Include="FlickrNetExtender\Data\Results\AddPhotoToPhotosetResult.cs" />
+    <Compile Include="FlickrNetExtender\Data\Results\ParallelOperationResultBase.cs" />
+    <Compile Include="FlickrNetExtender\Data\Results\PhotoSearchPageResult.cs" />
+    <Compile Include="FlickrNetExtender\Data\Results\PhotosetSearchPageResult.cs" />
+    <Compile Include="FlickrNetExtender\Data\Results\PhotosetsGetPhotosAllResult.cs" />
+    <Compile Include="FlickrNetExtender\Data\Results\UploadFileResult.cs" />
+    <Compile Include="FlickrNet\WebClientEx\WebClientEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="vt\common\VtFile.cs" />
+    <Compile Include="vt\extensions\DateTimeExtension.cs" />
+    <Compile Include="vt\extensions\DirectoryExtension.cs" />
+    <Compile Include="vt\extensions\ListExtension.cs" />
+    <Compile Include="vt\extensions\StringExtensions.cs" />
+    <Compile Include="FlickrNetExtender\Data\PathWithFlickrFiles.cs" />
+    <Compile Include="FlickrNetExtender\Data\File4Flickr.cs" />
+    <Compile Include="FlickrNet\ActivityEvent.cs" />
+    <Compile Include="FlickrNet\ActivityItem.cs" />
+    <Compile Include="FlickrNet\ActivityItemCollection.cs" />
+    <Compile Include="FlickrNet\ApiKeyRequiredException.cs" />
+    <Compile Include="FlickrNet\Auth.cs" />
+    <Compile Include="FlickrNet\AuthenticationRequiredException.cs" />
+    <Compile Include="FlickrNet\Blog.cs" />
+    <Compile Include="FlickrNet\BlogCollection.cs" />
+    <Compile Include="FlickrNet\BlogService.cs" />
+    <Compile Include="FlickrNet\BlogServiceCollection.cs" />
+    <Compile Include="FlickrNet\BoundaryBox.cs" />
+    <Compile Include="FlickrNet\Brand.cs" />
+    <Compile Include="FlickrNet\BrandCollection.cs" />
+    <Compile Include="FlickrNet\Cache.cs" />
+    <Compile Include="FlickrNet\Camera.cs" />
+    <Compile Include="FlickrNet\CameraCollection.cs" />
+    <Compile Include="FlickrNet\Cluster.cs" />
+    <Compile Include="FlickrNet\ClusterCollection.cs" />
+    <Compile Include="FlickrNet\Collection.cs" />
+    <Compile Include="FlickrNet\CollectionCollection.cs" />
+    <Compile Include="FlickrNet\CollectionInfo.cs" />
+    <Compile Include="FlickrNet\CollectionSet.cs" />
+    <Compile Include="FlickrNet\Contact.cs" />
+    <Compile Include="FlickrNet\ContactCollection.cs" />
+    <Compile Include="FlickrNet\Context.cs" />
+    <Compile Include="FlickrNet\CsvFile.cs" />
+    <Compile Include="FlickrNet\CsvFileCollection.cs" />
+    <Compile Include="FlickrNet\DateGranularity.cs" />
+    <Compile Include="FlickrNet\EchoResponseDictionary.cs" />
+    <Compile Include="FlickrNet\Enums.cs" />
+    <Compile Include="FlickrNet\ExceptionHandler.cs" />
+    <Compile Include="FlickrNet\Exceptions\BadUrlFoundException.cs" />
+    <Compile Include="FlickrNet\Exceptions\FormatNotFoundException.cs" />
+    <Compile Include="FlickrNet\Exceptions\InvalidApiKeyException.cs" />
+    <Compile Include="FlickrNet\Exceptions\InvalidSignatureException.cs" />
+    <Compile Include="FlickrNet\Exceptions\LoginFailedInvalidTokenException.cs" />
+    <Compile Include="FlickrNet\Exceptions\MethodNotFoundException.cs" />
+    <Compile Include="FlickrNet\Exceptions\MissingSignatureException.cs" />
+    <Compile Include="FlickrNet\Exceptions\PermissionDeniedException.cs" />
+    <Compile Include="FlickrNet\Exceptions\PhotoNotFoundException.cs" />
+    <Compile Include="FlickrNet\Exceptions\PhotosetNotFoundException.cs" />
+    <Compile Include="FlickrNet\Exceptions\ServiceUnavailableException.cs" />
+    <Compile Include="FlickrNet\Exceptions\UserNotFoundException.cs" />
+    <Compile Include="FlickrNet\Exceptions\UserNotLoggedInInsufficientPermissionsException.cs" />
+    <Compile Include="FlickrNet\ExifTag.cs" />
+    <Compile Include="FlickrNet\ExifTagCollection.cs" />
+    <Compile Include="FlickrNet\FavoriteContext.cs" />
+    <Compile Include="FlickrNet\FavoriteContextPhoto.cs" />
+    <Compile Include="FlickrNet\Flickr.cs" />
+    <Compile Include="FlickrNet\FlickrApiException.cs" />
+    <Compile Include="FlickrNet\FlickrConfigurationManager.cs" />
+    <Compile Include="FlickrNet\FlickrConfigurationSettings.cs" />
+    <Compile Include="FlickrNet\FlickrException.cs" />
+    <Compile Include="FlickrNet\FlickrResponder.cs" />
+    <Compile Include="FlickrNet\FlickrResponderAsync.cs" />
+    <Compile Include="FlickrNet\FlickrResponderSync.cs" />
+    <Compile Include="FlickrNet\FlickrResult.cs" />
+    <Compile Include="FlickrNet\FlickrWebException.cs" />
+    <Compile Include="FlickrNet\Flickr_Activity.cs" />
+    <Compile Include="FlickrNet\Flickr_ActivityAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Auth.cs" />
+    <Compile Include="FlickrNet\Flickr_AuthAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_AuthCalc.cs" />
+    <Compile Include="FlickrNet\Flickr_Blogs.cs" />
+    <Compile Include="FlickrNet\Flickr_BlogsAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Cameras.cs" />
+    <Compile Include="FlickrNet\Flickr_CamerasAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Collections.cs" />
+    <Compile Include="FlickrNet\Flickr_CollectionsAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Commons.cs" />
+    <Compile Include="FlickrNet\Flickr_CommonsAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Contacts.cs" />
+    <Compile Include="FlickrNet\Flickr_ContactsAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Favorites.cs" />
+    <Compile Include="FlickrNet\Flickr_FavoritesAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Galleries.cs" />
+    <Compile Include="FlickrNet\Flickr_GalleriesAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_GetResponse.cs" />
+    <Compile Include="FlickrNet\Flickr_GetResponseAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Groups.cs" />
+    <Compile Include="FlickrNet\Flickr_GroupsAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_GroupsDiscuss.cs" />
+    <Compile Include="FlickrNet\Flickr_GroupsDiscussAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Interestingness.cs" />
+    <Compile Include="FlickrNet\Flickr_InterestingnessAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_MachineTags.cs" />
+    <Compile Include="FlickrNet\Flickr_MachineTagsAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Notes.cs" />
+    <Compile Include="FlickrNet\Flickr_NotesAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_OAuth.cs" />
+    <Compile Include="FlickrNet\Flickr_OAuthAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_OAuthSync.cs" />
+    <Compile Include="FlickrNet\Flickr_Panda.cs" />
+    <Compile Include="FlickrNet\Flickr_PandaAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_People.cs" />
+    <Compile Include="FlickrNet\Flickr_PeopleAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Photos.cs" />
+    <Compile Include="FlickrNet\Flickr_PhotosAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_PhotosComments.cs" />
+    <Compile Include="FlickrNet\Flickr_PhotosCommentsAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Photosets.cs" />
+    <Compile Include="FlickrNet\Flickr_PhotosetsAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_PhotosGeo.cs" />
+    <Compile Include="FlickrNet\Flickr_PhotosGeoAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_PhotosMisc.cs" />
+    <Compile Include="FlickrNet\Flickr_PhotosMiscAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_PhotosPeople.cs" />
+    <Compile Include="FlickrNet\Flickr_PhotosPeopleAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_PhotosSuggestions.cs" />
+    <Compile Include="FlickrNet\Flickr_PhotosSuggestionsAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Places.cs" />
+    <Compile Include="FlickrNet\Flickr_PlacesAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Prefs.cs" />
+    <Compile Include="FlickrNet\Flickr_PrefsAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Push.cs" />
+    <Compile Include="FlickrNet\Flickr_PushAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Reflection.cs" />
+    <Compile Include="FlickrNet\Flickr_ReflectionAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Stats.cs" />
+    <Compile Include="FlickrNet\Flickr_StatsAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Tags.cs" />
+    <Compile Include="FlickrNet\Flickr_TagsAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Test.cs" />
+    <Compile Include="FlickrNet\Flickr_TestAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Upload.cs" />
+    <Compile Include="FlickrNet\Flickr_UploadAsync.cs" />
+    <Compile Include="FlickrNet\Flickr_Urls.cs" />
+    <Compile Include="FlickrNet\Flickr_UrlsAsync.cs" />
+    <Compile Include="FlickrNet\Gallery.cs" />
+    <Compile Include="FlickrNet\GalleryCollection.cs" />
+    <Compile Include="FlickrNet\GalleryPhoto.cs" />
+    <Compile Include="FlickrNet\GalleryPhotoCollection.cs" />
+    <Compile Include="FlickrNet\GeoAccuracy.cs" />
+    <Compile Include="FlickrNet\GeoContext.cs" />
+    <Compile Include="FlickrNet\GeoPermissions.cs" />
+    <Compile Include="FlickrNet\GeoPermissionType.cs" />
+    <Compile Include="FlickrNet\GlobalSuppressions.cs" />
+    <Compile Include="FlickrNet\GlobalSuppressions2.cs" />
+    <Compile Include="FlickrNet\GroupCategory.cs" />
+    <Compile Include="FlickrNet\GroupFullInfo.cs" />
+    <Compile Include="FlickrNet\GroupInfo.cs" />
+    <Compile Include="FlickrNet\GroupInfoCollection.cs" />
+    <Compile Include="FlickrNet\Groups.cs" />
+    <Compile Include="FlickrNet\GroupSearchResultCollection.cs" />
+    <Compile Include="FlickrNet\HotTag.cs" />
+    <Compile Include="FlickrNet\HotTagCollection.cs" />
+    <Compile Include="FlickrNet\IFlickrParsable.cs" />
+    <Compile Include="FlickrNet\Institution.cs" />
+    <Compile Include="FlickrNet\InstitutionCollection.cs" />
+    <Compile Include="FlickrNet\LicenseCollection.cs" />
+    <Compile Include="FlickrNet\Licenses.cs" />
+    <Compile Include="FlickrNet\LicenseType.cs" />
+    <Compile Include="FlickrNet\LockFile.cs" />
+    <Compile Include="FlickrNet\MD5Core.cs" />
+    <Compile Include="FlickrNet\MD5Managed.cs" />
+    <Compile Include="FlickrNet\MediaType.cs" />
+    <Compile Include="FlickrNet\Member.cs" />
+    <Compile Include="FlickrNet\MemberCollection.cs" />
+    <Compile Include="FlickrNet\MemberGroupInfo.cs" />
+    <Compile Include="FlickrNet\MemberGroupInfoCollection.cs" />
+    <Compile Include="FlickrNet\MemberTypes.cs" />
+    <Compile Include="FlickrNet\MethodCollection.cs" />
+    <Compile Include="FlickrNet\Namespace.cs" />
+    <Compile Include="FlickrNet\NamespaceCollection.cs" />
+    <Compile Include="FlickrNet\NoResponse.cs" />
+    <Compile Include="FlickrNet\OAuthAccessToken.cs" />
+    <Compile Include="FlickrNet\OAuthException.cs" />
+    <Compile Include="FlickrNet\OAuthRequestToken.cs" />
+    <Compile Include="FlickrNet\OpenCF\Cipher.cs" />
+    <Compile Include="FlickrNet\OpenCF\Const.cs" />
+    <Compile Include="FlickrNet\OpenCF\Context.cs" />
+    <Compile Include="FlickrNet\OpenCF\Crypto.cs" />
+    <Compile Include="FlickrNet\OpenCF\DiffHell.cs" />
+    <Compile Include="FlickrNet\OpenCF\Dsa.cs" />
+    <Compile Include="FlickrNet\OpenCF\Enums.cs" />
+    <Compile Include="FlickrNet\OpenCF\Error.cs" />
+    <Compile Include="FlickrNet\OpenCF\Format.cs" />
+    <Compile Include="FlickrNet\OpenCF\Hash.cs" />
+    <Compile Include="FlickrNet\OpenCF\HashAlgorithm.cs" />
+    <Compile Include="FlickrNet\OpenCF\HMACSHA1.cs" />
+    <Compile Include="FlickrNet\OpenCF\Key.cs" />
+    <Compile Include="FlickrNet\OpenCF\KeyedHashAlgorithm.cs" />
+    <Compile Include="FlickrNet\OpenCF\Mem.cs" />
+    <Compile Include="FlickrNet\OpenCF\Prov.cs" />
+    <Compile Include="FlickrNet\OpenCF\Rand.cs" />
+    <Compile Include="FlickrNet\OpenCF\Rsa.cs" />
+    <Compile Include="FlickrNet\OpenCF\Structs.cs" />
+    <Compile Include="FlickrNet\OpenCF\_NullKey.cs" />
+    <Compile Include="FlickrNet\PagedPhotoCollection.cs" />
+    <Compile Include="FlickrNet\Pair.cs" />
+    <Compile Include="FlickrNet\PairCollection.cs" />
+    <Compile Include="FlickrNet\PandaPhotoCollection.cs" />
+    <Compile Include="FlickrNet\ParsingException.cs" />
+    <Compile Include="FlickrNet\PartialSearchOptions.cs" />
+    <Compile Include="FlickrNet\PeoplePhotoCollection.cs" />
+    <Compile Include="FlickrNet\PersistentCache.cs" />
+    <Compile Include="FlickrNet\Person.cs" />
+    <Compile Include="FlickrNet\PersonLimits.cs" />
+    <Compile Include="FlickrNet\Photo.cs" />
+    <Compile Include="FlickrNet\PhotoCollection.cs" />
+    <Compile Include="FlickrNet\PhotoComment.cs" />
+    <Compile Include="FlickrNet\PhotoCommentCollection.cs" />
+    <Compile Include="FlickrNet\PhotoCountCollection.cs" />
+    <Compile Include="FlickrNet\PhotoFavorite.cs" />
+    <Compile Include="FlickrNet\PhotoFavoriteCollection.cs" />
+    <Compile Include="FlickrNet\PhotoInfo.cs" />
+    <Compile Include="FlickrNet\PhotoPermissions.cs" />
+    <Compile Include="FlickrNet\PhotoPerson.cs" />
+    <Compile Include="FlickrNet\PhotoPersonCollection.cs" />
+    <Compile Include="FlickrNet\PhotoSearchExtras.cs" />
+    <Compile Include="FlickrNet\PhotoSearchOptions.cs" />
+    <Compile Include="FlickrNet\PhotoSearchOrder.cs" />
+    <Compile Include="FlickrNet\Photoset.cs" />
+    <Compile Include="FlickrNet\PhotoSetCollection.cs" />
+    <Compile Include="FlickrNet\PhotosetCommentCollection.cs" />
+    <Compile Include="FlickrNet\PhotosetPhotoCollection.cs" />
+    <Compile Include="FlickrNet\Place.cs" />
+    <Compile Include="FlickrNet\PlaceCollection.cs" />
+    <Compile Include="FlickrNet\PlaceInfo.cs" />
+    <Compile Include="FlickrNet\PlaceType.cs" />
+    <Compile Include="FlickrNet\PlaceTypeInfo.cs" />
+    <Compile Include="FlickrNet\PlaceTypeInfoCollection.cs" />
+    <Compile Include="FlickrNet\PoolPrivacy.cs" />
+    <Compile Include="FlickrNet\PopularitySort.cs" />
+    <Compile Include="FlickrNet\PopularPhoto.cs" />
+    <Compile Include="FlickrNet\PopularPhotoCollection.cs" />
+    <Compile Include="FlickrNet\Predicate.cs" />
+    <Compile Include="FlickrNet\PredicateCollection.cs" />
+    <Compile Include="FlickrNet\ResponseXmlException.cs" />
+    <Compile Include="FlickrNet\SafeNativeMethods.cs" />
+    <Compile Include="FlickrNet\SerializableAttribute.cs" />
+    <Compile Include="FlickrNet\ShapeData.cs" />
+    <Compile Include="FlickrNet\ShapeDataCollection.cs" />
+    <Compile Include="FlickrNet\SignatureRequiredException.cs" />
+    <Compile Include="FlickrNet\Sizes.cs" />
+    <Compile Include="FlickrNet\StatDomain.cs" />
+    <Compile Include="FlickrNet\StatDomainCollection.cs" />
+    <Compile Include="FlickrNet\StatReferrer.cs" />
+    <Compile Include="FlickrNet\StatReferrerCollection.cs" />
+    <Compile Include="FlickrNet\Stats.cs" />
+    <Compile Include="FlickrNet\StatViews.cs" />
+    <Compile Include="FlickrNet\Subscription.cs" />
+    <Compile Include="FlickrNet\SubscriptionCollection.cs" />
+    <Compile Include="FlickrNet\Suggestion.cs" />
+    <Compile Include="FlickrNet\SuggestionCollection.cs" />
+    <Compile Include="FlickrNet\SuggestionStatus.cs" />
+    <Compile Include="FlickrNet\Tags.cs" />
+    <Compile Include="FlickrNet\Ticket.cs" />
+    <Compile Include="FlickrNet\TicketCollection.cs" />
+    <Compile Include="FlickrNet\Topic.cs" />
+    <Compile Include="FlickrNet\TopicCollection.cs" />
+    <Compile Include="FlickrNet\TopicReply.cs" />
+    <Compile Include="FlickrNet\TopicReplyCollection.cs" />
+    <Compile Include="FlickrNet\UnknownResponse.cs" />
+    <Compile Include="FlickrNet\UploadProgressEvent.cs" />
+    <Compile Include="FlickrNet\UploadResponse.cs" />
+    <Compile Include="FlickrNet\User.cs" />
+    <Compile Include="FlickrNet\UserGeoPermissions.cs" />
+    <Compile Include="FlickrNet\UtilityMethods.cs" />
+    <Compile Include="FlickrNet\Value.cs" />
+    <Compile Include="FlickrNet\ValueCollection.cs" />
+    <Compile Include="FlickrNet\VideoInfo.cs" />
+    <Compile Include="Flup\Flup.cs" />
+    <Compile Include="FlickrNetExtender\Ini\IniHelper.cs" />
+    <Compile Include="vt\extensions\ExceptionExtensions.cs" />
+    <Compile Include="vt\common\VtPath.cs" />
+    <Compile Include="vt\extensions\LongExtensions.cs" />
+    <Compile Include="FlickrNetExtender\Ini\FlickrExtenderSecretIni.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vt\common\Adler32.cs" />
+    <Compile Include="FlickrNetExtender\Data\FlickrProgressEventData.cs" />
+    <Compile Include="FlickrNetExtender\FlickrExtender.cs" />
+    <Compile Include="vt\extensions\TimeSpanExtension.cs" />
+    <Compile Include="vt\ini\TinyIniLine.cs" />
+    <Compile Include="vt\ini\TinyIniLineType.cs" />
+    <Compile Include="vt\ini\TinyIni.cs" />
+    <Compile Include="vt\ini\TinyIniAppFolder.cs" />
+    <Compile Include="vt\ini\TinyIniExeFolder.cs" />
+    <Compile Include="vt\ini\TinyIniWithFileName.cs" />
+    <Compile Include="vt\log\VtLog.cs" />
+    <Compile Include="vt\log\VtLogAppFolder.cs" />
+    <Compile Include="vt\log\VtLogExeFolder.cs" />
+    <Compile Include="vt\log\VtLogState.cs" />
+    <Compile Include="vt\log\VtLogStateConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="FlickrNet\example_app.config" />
+    <None Include="FlickrNet\FlickrNet.ndoc" />
+    <None Include="FlickrNet\FlickrNet.snk" />
+    <None Include="FlickrNet\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="FlickrNet\obj\Debug\FlickrNet.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FlickrNet\bin\Debug\FlickrNet.dll" />
+    <Content Include="FlickrNet\bin\Debug\FlickrNet.pdb" />
+    <Content Include="FlickrNet\bin\Debug\FlickrNet.xml" />
+    <Content Include="FlickrNet\CodeAnalysisDictionary.xml" />
+    <Content Include="FlickrNet\FlickrNet.csproj" />
+    <Content Include="FlickrNet\FlickrNet.csproj.vspscc" />
+    <Content Include="FlickrNet\FlickrNetCF.csproj" />
+    <Content Include="FlickrNet\FlickrNetSilverlight.csproj" />
+    <Content Include="FlickrNet\FlickrNetSilverlight.csproj.vspscc" />
+    <Content Include="FlickrNet\FlickrNetWP7.csproj" />
+    <Content Include="FlickrNet\FlickrNetWP7.csproj.vspscc" />
+    <Content Include="FlickrNet\License-Apache-2.0.txt" />
+    <Content Include="FlickrNet\License-LGPL-2.1.txt" />
+    <Content Include="FlickrNet\License.txt" />
+    <Content Include="FlickrNet\Notice-Apache-2.0.txt" />
+    <Content Include="FlickrNet\obj\Debug\FlickrNet.csproj.FileListAbsolute.txt" />
+    <Content Include="FlickrNet\obj\Debug\FlickrNet.dll" />
+    <Content Include="FlickrNet\obj\Debug\FlickrNet.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FlickrNet\obj\Debug\TempPE\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="vt\xml\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

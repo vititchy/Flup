@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flup", "Flup\Flup.csproj", "{A30DB89C-638D-4AC3-A5ED-C51BBFE4A578}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlupTests", "FlupTests\FlupTests.csproj", "{108C9798-E8A2-4BCE-B758-147DCFF93EBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A30DB89C-638D-4AC3-A5ED-C51BBFE4A578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A30DB89C-638D-4AC3-A5ED-C51BBFE4A578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A30DB89C-638D-4AC3-A5ED-C51BBFE4A578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A30DB89C-638D-4AC3-A5ED-C51BBFE4A578}.Release|Any CPU.Build.0 = Release|Any CPU
+		{108C9798-E8A2-4BCE-B758-147DCFF93EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{108C9798-E8A2-4BCE-B758-147DCFF93EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{108C9798-E8A2-4BCE-B758-147DCFF93EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{108C9798-E8A2-4BCE-B758-147DCFF93EBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

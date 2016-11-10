@@ -1,0 +1,14 @@
+﻿
+// This file is used by Code Analysis to maintain SuppressMessage 
+// attributes that are applied to this project.
+// Project-level suppressions either have no target or are given 
+// a specific target and scoped to a namespace, type, member, etc.
+
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "S1449:Culture should be specified for \"string\" operations", Justification = "<Pending>", Scope = "member", Target = "~M:FlickrNetExtender.Flup.GetFlupFlickrPhotos(FlickrNetExtender.FlickrExtender)~System.Threading.Tasks.Task{System.Collections.Generic.List{FlickrNet.Photo}}")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "S1854:Dead stores should be removed", Justification = "<Pending>", Scope = "member", Target = "~M:FlickrNetExtender.Flup.GetNewLocalFiles(System.Collections.Generic.Dictionary{System.IO.DirectoryInfo,System.Collections.Generic.List{System.IO.FileInfo}},System.Collections.Generic.List{FlickrNet.Photo})~System.Collections.Generic.List{FlickrNetExtender.PathWithFlickrFiles}")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Maintainability", "S125:Sections of code should not be \"commented out\"", Justification = "<Pending>", Scope = "member", Target = "~M:FlickrNetExtender.Flup.OnUploadProgressEventAction(FlickrNet.UploadProgressEventArgs)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Naming", "S100:Methods and properties should be named in camel case", Justification = "<Pending>", Scope = "member", Target = "~M:FlickrNetExtender.Flup.GetNumericCRC(System.Collections.Generic.List{FlickrNet.Photo})~System.Collections.Generic.List{System.Int64}")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Naming", "S100:Methods and properties should be named in camel case", Justification = "<Pending>", Scope = "member", Target = "~P:FlickrNetExtender.Ini.IniHelper.NumberOfBytesForCRC")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "S2360:Optional parameters should not be used", Justification = "<Pending>", Scope = "member", Target = "~M:FlickrNetExtender.FlickrExtender.ParallelPhotosetsGetList(System.Action{FlickrNetExtender.Data.Parallel.ParallelOperationData{FlickrNetExtender.Data.Results.PhotosetSearchPageResult}},System.Int32)~System.Threading.Tasks.Task{System.Collections.Generic.List{FlickrNet.Photoset}}")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "S2360:Optional parameters should not be used", Justification = "<Pending>", Scope = "member", Target = "~M:FlickrNetExtender.FlickrExtender.ParallelGetPhotos(System.Action{FlickrNetExtender.Data.Parallel.ParallelOperationData{FlickrNetExtender.Data.Results.PhotoSearchPageResult}},System.Int32)~System.Threading.Tasks.Task{System.Collections.Generic.List{FlickrNet.Photo}}")]
+
